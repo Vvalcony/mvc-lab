@@ -30,7 +30,7 @@ class BookController1 extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreBookRequest $request)
     {
        Book::create($request->validated());
     
@@ -58,7 +58,7 @@ class BookController1 extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Book $book)
+    public function update(UpdateBookRequest $request, Book $book)
     {
          $book->update($request->validated());
     
